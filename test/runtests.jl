@@ -94,7 +94,6 @@ BrokenRecord.configure!(; path="http_record")
     # pug
     cid =  playback(() -> pug(:compound, :name, "ethanol", :cids, :txt, return_text = true), "ethanol_pug.bson")
     @test cid == "702"
-
     #synonyms
     @test "Trimesta" ∈ playback(() -> get_synonyms(name="estriol"), "estriol_synonyms_from_name.bson")
     sleep(5.0 * get_recordings)
